@@ -1,0 +1,21 @@
+{
+  "name": "taseski.vlado-gmail.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\"",
+    "build": "tsc -p service/src",
+    "start": "node service/dst/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vtaseski/taseski.vlado-gmail.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.7.3",
+    "typescript": "^3.2.2"
+  }
+}
