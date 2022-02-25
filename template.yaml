@@ -1,0 +1,57 @@
+name: Strapi Serverless
+description: Strapi is an open source Headless CMS built with NodeJS. Using Strapi you can design and publish your content consumed by your apps via API.
+coverImage: https://assets.strapi.io/uploads/strapi-cover_1fabc982ce.png
+logo: https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/763/988af53b-5d7e-435a-98eb-dd4aff5299d2.png
+docs: https://microtica.com/docs
+
+interface:
+  input:
+    DOMAIN_NAME:
+      type: string
+
+destinations:
+ - personal
+
+infrastructure:
+  resources:
+    VPC:
+      type: 6yxxtefmfanxrh2zt8hd:v0.5.3-nat-ip-output
+      properties:
+        - key: natInstanceType
+          value: t2.micro
+    StrapiInfra:
+      type: fehbv2tgh63p3zenixwm:v4.0.0
+      properties:
+        - key: VpcId
+          reference: VPC.vpcId
+        - key: PrivateSubnet1Id
+          reference: VPC.privateSubnet1
+        - key: PrivateSubnet2Id
+          reference: VPC.privateSubnet2
+        - key: CPU
+          value: "256"
+        - key: Memory
+          value: "512"
+        - key: DesiredReplicas
+          value: "1"
+        - key: DatabaseClient
+          value: sqlite
+    AppRunner:
+      type: 55xshbm8va8cx51kfd81:v0.3.2-redirect-http-https
+      properties:
+        - key: VpcId
+          reference: VPC.vpcId
+        - key: PrivateSubnet1Id
+          reference: VPC.privateSubnet1
+        - key: PrivateSubnet2Id
+          reference: VPC.privateSubnet2
+        - key: PublicSubnet1Id
+          reference: VPC.publicSubnet1
+        - key: PublicSubnet2Id
+          reference: VPC.publicSubnet2
+        - key: CustomTaskDefinitionArn
+          reference: StrapiInfra.TaskDefinitionArn
+        - key: ContainerPort
+          reference: StrapiInfra.ContainerPort
+        - key: DesiredReplicas
+          reference: StrapiInfra.DesiredReplicas
