@@ -14,7 +14,7 @@ destinations:
 
 infrastructure:
  resources:
-    S3Bucket2:
+    S3Bucket3:
       type: mxeqfp7i33g7knwv7z3o:latest
       properties:
         - key: bucketName
