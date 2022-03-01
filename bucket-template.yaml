@@ -14,12 +14,12 @@ destinations:
 
 infrastructure:
  resources:
-    S3Bucket1:
+    S3Bucket2:
       type: mxeqfp7i33g7knwv7z3o:latest
       properties:
         - key: bucketName
           value: "vladotoni123"
-    AnotherS3Bucket:
+    AnotherS3Bucke3:
       type: mxeqfp7i33g7knwv7z3o:latest
       properties:
         - key: bucketName
