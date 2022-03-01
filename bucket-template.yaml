@@ -15,12 +15,12 @@ destinations:
 infrastructure:
  resources:
     S3Bucket:
-      type: 8u7rwrfs9wbb4bhyuzid:latest
+      type: mxeqfp7i33g7knwv7z3o:latest
       properties:
-        - key: accessControl
-          value: Private
+        - key: bucketName
+          value: "vladotoni123"
     AnotherS3Bucket:
-      type: 8u7rwrfs9wbb4bhyuzid:latest
+      type: mxeqfp7i33g7knwv7z3o:latest
       properties:
-        - key: accessControl
-          value: Private
+        - key: bucketName
+          value: "tonivlado321"
