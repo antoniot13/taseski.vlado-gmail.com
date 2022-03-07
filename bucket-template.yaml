@@ -11,6 +11,8 @@ interface:
 
 destinations:
  - personal
+ 
+git: true
 
 infrastructure:
  resources:
