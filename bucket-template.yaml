@@ -28,7 +28,7 @@ infrastructure:
       properties:
         - key: bucketName
           value: "tonivlado321"       
-     VAApp:
+    VAApp:
       source: git
       properties:
         - key: bucketName
