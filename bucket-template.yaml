@@ -25,4 +25,4 @@ infrastructure:
       source: git
       properties:
         - key: bucketName
-          value: "perovladotoni123"
+          value: "{{BUCKET_NAME}}"
