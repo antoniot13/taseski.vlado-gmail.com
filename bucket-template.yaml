@@ -6,12 +6,8 @@ docs: https://microtica.com/docs
 
 interface:
   inputs:
-    AnotherS3Bucke3:
-      BUCKET_NAME:
-        type: string
-     VAApp:
-       BUCKET_NAME:
-         type: string
+     BUCKET_NAME:
+      type: string
 
 destinations:
  - personal
