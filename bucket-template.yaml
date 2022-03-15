@@ -5,9 +5,6 @@ logo: https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image
 docs: https://microtica.com/docs
 
 interface:
-  inputs:
-     BUCKET_NAME:
-      type: string
 
 destinations:
  - personal
