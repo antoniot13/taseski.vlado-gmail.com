@@ -5,22 +5,15 @@ logo: https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image
 docs: https://microtica.com/docs
 
 interface:
+  input:
+    BUCKET_NAME:
+      type: string
 
 destinations:
  - personal
  
 infrastructure:
- resources:
-    S3Bucket3:
-      type: mxeqfp7i33g7knwv7z3o:latest
-      properties:
-        - key: bucketName
-          value: "vladotoni123"
-    AnotherS3Bucke3:
-      type: mxeqfp7i33g7knwv7z3o:latest
-      properties:
-        - key: bucketName
-          value: "tonivlado321"       
+ resources: 
     VAApp:
       source: git
       properties:
